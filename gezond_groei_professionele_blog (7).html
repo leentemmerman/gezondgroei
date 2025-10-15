@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GezondGroei.nl - Opvoeding & Gezondheid</title>
+  <style>
+    :root{--green:#28a745;--dark:#223;--muted:#666}
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, 'Helvetica Neue', Arial;line-height:1.5;margin:0;color:var(--dark);background:#f7fbf8;scroll-behavior:smooth}
+    header{background:linear-gradient(90deg,#eaffea,white);padding:20px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e2efe3;position:sticky;top:0;z-index:1000}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo .mark{width:48px;height:48px;border-radius:10px;background:var(--green);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    nav a{margin-left:16px;color:var(--dark);text-decoration:none;font-weight:600;cursor:pointer}
+    .container{max-width:1100px;margin:28px auto;padding:0 18px}
+
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:center}
+    .hero .headline{background:white;padding:22px;border-radius:12px;box-shadow:0 6px 18px rgba(15,50,20,0.06)}
+    .headline h1{margin:0 0 6px;font-size:26px}
+    .headline p{margin:0;color:var(--muted)}
+    .cta{display:inline-block;margin-top:12px;padding:10px 14px;border-radius:8px;background:var(--green);color:#fff;text-decoration:none;font-weight:700}
+    .hero .side-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(15,50,20,0.04)}
+    .side-card img{width:100%;height:220px;object-fit:cover;display:block}
+    .side-card .meta{padding:12px}
+
+    main{display:grid;grid-template-columns:2fr 320px;gap:18px;margin-top:18px}
+    article.post{background:white;padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(10,30,10,0.03);margin-bottom:20px}
+    article.post h2{margin:0 0 10px}
+    .meta-line{color:var(--muted);font-size:13px;margin-bottom:12px}
+    .post img{width:100%;height:220px;object-fit:cover;border-radius:8px;margin-bottom:12px}
+    .post p{margin:0 0 10px}
+    .badge{display:inline-block;padding:6px 8px;border-radius:20px;background:#fff7f7;color:#b33;font-weight:700;border:1px solid #ffd6d6}
+
+    aside{position:relative}
+    .card{background:#fff;padding:14px;border-radius:12px;box-shadow:0 6px 18px rgba(10,30,10,0.03);margin-bottom:12px}
+    .small{font-size:13px;color:var(--muted)}
+    .newsletter input{width:100%;padding:10px;margin-top:8px;border-radius:8px;border:1px solid #e6efe6}
+    .ebook{display:flex;gap:10px;align-items:center}
+    .ebook img{width:72px;height:72px;object-fit:cover;border-radius:8px}
+
+    footer{max-width:1100px;margin:44px auto;padding:22px;border-top:1px solid #e6efe6;color:var(--muted);font-size:13px}
+
+    @media (max-width:860px){
+      .hero{grid-template-columns:1fr}
+      main{grid-template-columns:1fr}
+      .side-card{order:3}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <div class="mark">GG</div>
+      <div>
+        <div style="font-weight:800">GezondGroei.nl</div>
+        <div style="font-size:12px;color:var(--muted)">Opvoeding • Gezondheid • Tips</div>
+      </div>
+    </div>
+    <nav>
+      <a onclick="document.getElementById('artikelen').scrollIntoView({behavior:'smooth'})">Artikelen</a>
+      <a onclick="document.getElementById('tips').scrollIntoView({behavior:'smooth'})">Tips & Tricks</a>
+      <a onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section class="hero">
+      <div class="headline">
+        <span class="badge">EXCLUSIEF</span>
+        <h1>Nieuw onderzoek: Kinderen die groenten eten voor het ontbijt zijn slimmer!</h1>
+        <p>10 minuten per dag kan levenslang verschil maken, aldus het "Internationaal Instituut voor Kinderbreinontwikkeling".</p>
+        <a class="cta" onclick="document.getElementById('artikelen').scrollIntoView({behavior:'smooth'})">Lees het volledige artikel</a>
+      </div>
+
+      <aside class="side-card">
+        <img src="https://picsum.photos/seed/childveg/800/400" alt="Kind eet groenten">
+        <div class="meta">
+          <strong>Wist je dat?</strong>
+          <div class="small">Onze lezersrapportage: 82% van ouders zegt verschil te zien binnen 2 weken.</div>
+        </div>
+      </aside>
+    </section>
+
+    <main id="artikelen">
+      <section>
+        <article class="post">
+          <h2>Waarom suiker het grootste gevaar is voor kinderen</h2>
+          <div class="meta-line">Door Redactie GezondGroei — 11 oktober 2025 — <span style="color:#b33;font-weight:700">Onderzoeksresultaten</span></div>
+          <img src="https://picsum.photos/seed/cookies/1200/600" alt="Koekjes">
+          <p>Recent onderzoek toont aan dat één koekje per dag het risico op gedragsproblemen met <strong>300%</strong> verhoogt. Ouders worden dringend aangeraden suiker volledig te vermijden, ook tijdens feestjes en traktaties op school.</p>
+          <p>Vervang koekjes door broccoli of selderij voor optimaal resultaat. Lees verder om de 5-minuten regel te ontdekken die elke ouder eenvoudig kan toepassen.</p>
+        </article>
+
+        <article class="post">
+          <h2>De 5-minuten regel: hoe 5 minuten per dag je kind verandert</h2>
+          <div class="meta-line">Door Parenting Coach L. van Groen — 4 oktober 2025</div>
+          <img src="https://picsum.photos/seed/familyveg/1200/600" alt="Ouders en kinderen">
+          <p>Door slechts 5 minuten per dag samen met je kind te bewegen en groenten te eten, stimuleer je het immuunsysteem én de hersenontwikkeling. Ouders die deze methode toepassen melden een opmerkelijke toename in concentratie en schoolprestaties.</p>
+        </article>
+
+        <article class="post">
+          <h2>Top 10 superfoods die het IQ van je kind verhogen</h2>
+          <div class="meta-line">Door Redactie GezondGroei — 5 oktober 2025</div>
+          <img src="https://picsum.photos/seed/superfoods/1200/600" alt="Superfoods">
+          <p>Volgens experts bevatten bepaalde voedingsmiddelen stoffen die de hersenfunctie van kinderen zouden stimuleren. Hier zijn 10 superfoods die je eenvoudig in het ontbijt of tussendoortje kunt verwerken:</p>
+          <ol>
+            <li>Blauwe bessen – stimuleren geheugen en concentratie</li>
+            <li>Spinazie – rijk aan ijzer en foliumzuur voor hersenontwikkeling</li>
+            <li>Notenmix – bevordert concentratie en focus</li>
+            <li>Avocado – gezonde vetten voor hersenen en cellen</li>
+            <li>Volkoren havermout – zorgt voor langzame energie en stabiele bloedsuiker</li>
+            <li>Broccoli – rijk aan antioxidanten en vitamine K</li>
+            <li>Griekse yoghurt – eiwitten en calcium, ondersteunt groei</li>
+            <li>Zalm – omega-3 vetzuren verbeteren cognitieve functies</li>
+            <li>Ei – choline ondersteunt geheugenontwikkeling</li>
+            <li>Tomaat – antioxidanten en vitamines versterken het immuunsysteem</li>
+          </ol>
+        </article>
+      </section>
+
+      <aside>
+        <div class="card newsletter">
+          <strong>Nieuwsbrief</strong>
+          <div class="small">Schrijf je in voor wekelijkse tips & health boosts</div>
+          <input placeholder="Je e-mailadres" />
+          <button style="margin-top:8px;padding:8px 10px;border-radius:8px;background:var(--green);color:white;border:0;font-weight:700">Inschrijven</button>
+        </div>
+
+        <div class="card ebook">
+          <img src="https://picsum.photos/seed/ebook/120/120" alt="e-book">
+          <div>
+            <strong>Gratis e-book</strong>
+            <div class="small">10 superfoods die je kind slimmer maken</div>
+            <button style="margin-top:8px;padding:6px 8px;border-radius:8px;background:#fff;border:1px solid #e6efe6">Download</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <strong>Populaire tags</strong>
+          <div style="margin-top:8px">
+            <span class="small">#opvoeding</span> · <span class="small">#gezondheid</span> · <span class="small">#superfood</span>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <section id="tips">
+      <h2>Tips & Tricks voor gezonde kinderen</h2>
+      <ul>
+        <li>Start de dag met een klein groentegerecht of smoothie.</li>
+        <li>Beperk snacks en suikerhoudende dranken.</li>
+        <li>Plan dagelijks 10 minuten actieve spelletjes of sportmomenten.</li>
+        <li>Maak gezonde keuzes visueel aantrekkelijk: kleurrijk bord, leuke bekers.</li>
+        <li>Betrek kinderen bij koken: ze proeven sneller wat ze zelf hebben gemaakt.</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Vragen of tips? Stuur ons een bericht via info@gezondgroei.nl of gebruik onderstaand formulier:</p>
+      <form>
+        <input type="text"
